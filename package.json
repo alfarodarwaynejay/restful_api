@@ -1,0 +1,35 @@
+{
+  "name": "restful_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:pull": "docker pull mongo",
+    "docker:stop": "docker stop mongodb",
+    "docker:remove": "docker system prune && docker rmi mongo",
+    "docker:start": "docker run -d -p 27017-27019:27017-27019 --name mongodb mongo",
+    "start": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfarodarwaynejay/restful_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfarodarwaynejay/restful_api/issues"
+  },
+  "homepage": "https://github.com/alfarodarwaynejay/restful_api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
